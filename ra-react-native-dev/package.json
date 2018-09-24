@@ -1,0 +1,93 @@
+{
+  "name": "ra-react-native",
+  "author": {
+    "name": "Remote Assembly LLC",
+    "email": "contact@remoteassembly.com",
+    "url": "https://www.remoteassembly.com/"
+  },
+  "description": "React Native App Starter Kit for Android and iOS",
+  "license": "MIT",
+  "homepage": "https://www.remoteassembly.com/",
+  "bugs": "https://github.com/remoteassembly/ra-react-native/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remoteassembly/ra-react-native"
+  },
+  "keywords": [
+    "React Native",
+    "Starter Kit",
+    "Boilerplate",
+    "Redux"
+  ],
+  "version": "1.0.1",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "bundle:ios": "node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --entry-file index.js --bundle-output ios/PepperoniAppTemplate/main.jsbundle --dev=false --verbose",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "standard --verbose --fix 'src/**/*.js' | snazzy && prettier-standard 'src/**/*.js'",
+    "coverage": "rimraf coverage && jest --coverage",
+    "version": "support/version-ios.sh"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "event-emitter": "^0.3.4",
+    "immutable": "^3.7.6",
+    "lodash": "^4.11.0",
+    "moment": "^2.12.0",
+    "prop-types": "^15.6.0",
+    "react": "16.1.0",
+    "react-native-google-analytics-bridge": "^5.4.1",
+    "react-native-vector-icons": "^4.4.2",
+    "react-navigation": "1.0.0-beta.19",
+    "react-redux": "^5.0.6",
+    "redux": "^3.4.0",
+    "redux-logger": "^3.0.6",
+    "redux-loop-symbol-ponyfill": "^2.2.0",
+    "redux-promise": "^0.5.3",
+    "redux-socket.io": "^1.4.0",
+    "redux-thunk": "^2.0.1",
+    "socket.io-client": "^2.0.4",
+    "standard-http-error": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "enzyme": "^2.2.0",
+    "fetch-mock": "^5.5.0",
+    "istanbul": "1.0.0-alpha.2",
+    "jest": "^17.0.2",
+    "plop": "^1.7.4",
+    "prettier-standard": "^7.0.3",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^16.0.0",
+    "react-native": "^0.55.4",
+    "react-native-mock": "~0.2.5",
+    "react-test-renderer": "~15.4.2",
+    "remote-redux-devtools": "^0.5.7",
+    "rimraf": "^2.5.2",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "beforeAll",
+      "beforeEach",
+      "afterAll",
+      "afterEach",
+      "jest",
+      "expect",
+      "fetch",
+      "__DEV__"
+    ]
+  }
+}
