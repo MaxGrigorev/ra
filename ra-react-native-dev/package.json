@@ -60,6 +60,7 @@
     "standard-http-error": "^2.0.0"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
     "enzyme": "^2.2.0",
     "fetch-mock": "^5.5.0",
