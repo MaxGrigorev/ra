@@ -22,11 +22,10 @@ export async function calc (id) {
     id: id
   })
   .then((response)=> {
-    console.log('likeDog',response)
     return response.data.result
   })
   .catch(function (error) {
-    //console.log('error123',error);
+    console.log('error',error);
   });
   return {
     type: CALC,

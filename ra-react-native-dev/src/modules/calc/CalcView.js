@@ -25,8 +25,6 @@ class CalcView extends Component {
   calcButtClearHandler=(textVal)=>{
     this.setState({op:'+',op1:''})
     this.props.calcStateActions.reset()
-    console.log('calcButtClearHandler')
-    
   }
 
   calcButtRavnoHandler=(textVal)=>{
