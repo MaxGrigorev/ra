@@ -8,6 +8,8 @@ import config from './config'
 import socket from './socket'
 import errorReporter from './utils/errorReporter'
 
+let routeCalc = require('./routes/calc');
+
 let app = express()
 app.server = http.createServer(app)
 
@@ -47,5 +49,7 @@ initializeDb(db => {
     )
   })
 })
+
+app.use('/api/calc', routeCalc);
 
 export default app

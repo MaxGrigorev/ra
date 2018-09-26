@@ -3,15 +3,17 @@ import { TabNavigator, StackNavigator } from 'react-navigation'
 
 import CounterViewContainer from '../counter/CounterViewContainer'
 import ColorViewContainer from '../colors/ColorViewContainer'
+import CalcViewContainer from '../calc/CalcViewContainer'
 
-const headerColor = '#39babd'
+const headerColor = 'green'//'#39babd'
 const activeColor = 'white'
 
 // TabNavigator is nested inside StackNavigator
 export const MainScreenNavigator = TabNavigator(
   {
     Counter: { screen: CounterViewContainer },
-    Color: { screen: ColorViewContainer }
+    Color: { screen: ColorViewContainer },
+    Calc:{screen: CalcViewContainer}
   },
   {
     tabBarOptions: {
@@ -27,7 +29,7 @@ export const MainScreenNavigator = TabNavigator(
 )
 
 MainScreenNavigator.navigationOptions = {
-  title: 'Pepperoni App Template',
+  title: 'Super Calculator',
   headerTitleStyle: { color: 'white' },
   headerStyle: {
     backgroundColor: headerColor,
@@ -37,8 +39,8 @@ MainScreenNavigator.navigationOptions = {
 
 // Root navigator is a StackNavigator
 const AppNavigator = StackNavigator({
-  Home: { screen: MainScreenNavigator },
-  InfiniteColorStack: { screen: ColorViewContainer }
+  Home: { screen: CalcViewContainer },
+  //InfiniteColorStack: { screen: ColorViewContainer }
 })
 
 export default AppNavigator
