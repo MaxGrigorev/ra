@@ -2,7 +2,7 @@ import { SIGN_OUT, SESSION_STATE } from './actionTypes'
 import ls from '../utils/ls'
 
 const initialState = {
-  isLoggedIn: false,
+  isLoggedIn: true,
   isConnected: false
 }
 
